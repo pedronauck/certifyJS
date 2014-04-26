@@ -9,7 +9,8 @@ var fs = require('fs'),
     path = require('path'),
     phantomjs = require('phantomjs'),
     binPath = phantomjs.path,
-    data = require(path.join(__dirname, '_data.json'));
+    email = require('./lib/mail.js'),
+    data = require('./_data.json');
 
 var error = cli.red.bold,
     notice = cli.cyan,

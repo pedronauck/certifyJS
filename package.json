@@ -17,7 +17,8 @@
     "gulp-connect": "^2.0.5",
     "phantomjs": "^1.9.7-4",
     "nodepdf": "^1.0.1",
-    "cli-color": "^0.2.3"
+    "cli-color": "^0.2.3",
+    "nodemailer": "^0.6.3"
   },
   "author": "Pedro Nauck <pedronauck@gmail.com>",
   "license": "MIT"

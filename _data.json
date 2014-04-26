@@ -7,10 +7,8 @@
     "city": "Florianópolis",
     "state": "SC"
   },
-  "participants": [
-    { "name": "Luiz Henrique Estácio" },
-    { "name": "Pedro Nauck" },
-    { "name": "Mariana Nauck" },
-    { "name": "Cibele Heleodora" }
-  ]
+  "participants": [{
+    "name": "Pedro Nauck",
+    "email": "pedronauck@gmail.com"
+  }]
 }
