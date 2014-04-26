@@ -1,0 +1,32 @@
+{
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "esnext": true,
+  "freeze": true,
+  "immed": true,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "noempty": true,
+  "nonbsp": true,
+  "nonew": true,
+  "plusplus": true,
+  "quotmark": "single",
+  "undef": false,
+  "unused": false,
+  "strict": true,
+  "trailing": true,
+  "laxbreak": true,
+  "maxparams": 4,
+  "maxdepth": 3,
+  "maxlen": 80,
+  "globalstrict": true,
+  "browser": true,
+  "devel": true,
+  "node": true,
+  "jquery": true,
+  "predef": [
+    "angular"
+  ]
+}

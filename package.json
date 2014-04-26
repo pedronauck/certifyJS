@@ -1,0 +1,14 @@
+{
+  "name": "certificy",
+  "version": "0.0.1",
+  "description": "NodeJS module that generate a course certificate in PDF",
+  "main": "app.js",
+  "keywords": [
+    "nodejs",
+    "pdf",
+    "certificate",
+    "generator"
+  ],
+  "author": "Pedro Nauck <pedronauck@gmail.com>",
+  "license": "MIT"
+}
