@@ -1,3 +1,7 @@
+/* ----------------------------------------------------------------------------
+*  Reset by Eric Meyer
+* ---------------------------------------------------------------------------*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,13 +28,21 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-body {
-  line-height: 1;
-  font-family: 'Lucida Grande';
+*,
+*::before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ol, ul {
   list-style: none;
+}
+
+strong {
+  font-weight: bold;
 }
 
 blockquote, q {
@@ -52,9 +64,51 @@ table {
 *  Page Styles
 * ---------------------------------------------------------------------------*/
 
+body {
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: 'Lucida Grande';
+  background: #F5F6F7;
+}
+
 .main {
   width: 842px;
   height: 595px;
-  border: 1px dotted #333;
   margin: 40px;
+}
+
+.header {
+  width: 100%;
+  height: 160px;
+  background: url(../images/header.jpg) no-repeat;
+}
+
+.footer {
+  width: 100%;
+  height: 80px;
+  background: url(../images/footer.jpg) no-repeat;
+}
+
+/* ----------------------------------------------------------------------------
+*  Content
+* ---------------------------------------------------------------------------*/
+
+.content {
+  width: 100%;
+  height: 355px;
+  text-align: center;
+  padding: 0 180px;
+}
+
+.content .name {
+  font-size: 40px;
+  margin: 30px 0;
+}
+
+.content .description {
+  margin-bottom: 30px;
+}
+
+.content .assign {
+  margin: 0 auto 0 auto;
 }

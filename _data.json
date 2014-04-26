@@ -1,0 +1,16 @@
+{
+  "course": {
+    "name": "Curso BeMEAN",
+    "startDate": "07/04/2014",
+    "endDate": "11/04/2014",
+    "totalHours": "20 horas",
+    "city": "Florianópolis",
+    "state": "SC"
+  },
+  "participants": [
+    { "name": "André Souza" },
+    { "name": "Pedro Nauck" },
+    { "name": "Mariana Nauck" },
+    { "name": "Cibele Heleodora" }
+  ]
+}

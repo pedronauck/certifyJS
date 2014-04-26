@@ -5,7 +5,7 @@ var fs = require('fs'),
     slug = require('slug'),
     swig = require('swig'),
     pdf = require('html-pdf'),
-    names = require('./data/names.json');
+    info = require('./_data.json');
 
 if (!sh.test('-e', './build')) {
   sh.mkdir('./build');
@@ -14,28 +14,20 @@ if (!sh.test('-e', './build')) {
   sh.mkdir('./build');
 }
 
-names.forEach(function(data) {
-  data.styleDir = '../templates/css';
-  data.imagesDir = '../templates/images';
-
+info.participants.forEach(function(participant) {
   var file = sh.cat('./templates/index.html'),
-      newFile = swig.render(file, { locals: data }),
-      slugName = slug(data.name).toLowerCase();
+      newFile = swig.render(file, {
+        locals: {
+          name: participant.name,
+          course: info.course
+        }
+      }),
+      slugName = slug(participant.name).toLowerCase();
+
+  newFile = newFile.replace(/href\=\"css/g, 'href="../templates/css');
+  newFile = newFile.replace(/src\=\"images/g, 'src="../templates/images');
 
   fs.writeFile('./build/' + slugName + '.html', newFile, function(err) {
-    console.log('Generate html from ' + data.name);
+    console.log('Generate html from ' + participant.name);
   });
-
-  // var sizes = {
-  //   width: '297mm',
-  //   height: '210 mm'
-  // };
-
-  // pdf.create(newFile, sizes, function(err, buffer) {
-  //   if (err) {
-  //     return console.log(err);
-  //   }
-
-  //   fs.writeFile('./build/' + slugName + '.pdf', buffer);
-  // });
 });
