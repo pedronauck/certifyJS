@@ -65,28 +65,23 @@ table {
 * ---------------------------------------------------------------------------*/
 
 body {
+  width: 100%;
   line-height: 1.5;
   font-size: 16px;
   font-family: 'Lucida Grande';
   background: #F5F6F7;
 }
 
-.main {
-  width: 842px;
-  height: 595px;
-  margin: 40px;
-}
-
+.main,
+.footer,
 .header {
   width: 100%;
-  height: 160px;
-  background: url(../images/header.jpg) no-repeat;
 }
 
-.footer {
+.footer img,
+.header img {
+  display: block;
   width: 100%;
-  height: 80px;
-  background: url(../images/footer.jpg) no-repeat;
 }
 
 /* ----------------------------------------------------------------------------
@@ -95,18 +90,19 @@ body {
 
 .content {
   width: 100%;
-  height: 355px;
   text-align: center;
-  padding: 0 180px;
+  padding: 5% 20%;
 }
 
 .content .name {
-  font-size: 40px;
-  margin: 30px 0;
+  font-size: 4.375em;
+  line-height: 1;
+  margin-bottom: 5%;
 }
 
 .content .description {
-  margin-bottom: 30px;
+  font-size: 2.5em;
+  margin-bottom: 5%;
 }
 
 .content .assign {

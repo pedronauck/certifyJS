@@ -5,3 +5,4 @@ pids
 *.pid
 *.seed
 node_modules
+certificates

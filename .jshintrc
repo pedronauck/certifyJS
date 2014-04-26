@@ -27,6 +27,7 @@
   "node": true,
   "jquery": true,
   "predef": [
-    "angular"
+    "angular",
+    "phantom"
   ]
 }
