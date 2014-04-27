@@ -3,18 +3,19 @@
 var fs = require('fs'),
     cp = require('child_process'),
     sh = require('shelljs'),
-    cli = require('cli-color'),
+    colors = require('colors'),
     slug = require('slug'),
     swig = require('swig'),
     path = require('path'),
     phantomjs = require('phantomjs'),
     binPath = phantomjs.path,
-    email = require('./lib/mail.js'),
     data = require('./_data.json');
 
-var error = cli.red.bold,
-    notice = cli.cyan,
-    done = cli.green;
+colors.setTheme({
+  notice: 'cyan',
+  error: 'red',
+  done: 'green'
+});
 
 var dir = {
   certificates: path.join(__dirname, 'certificates'),
@@ -29,10 +30,10 @@ if (!sh.test('-e', dir.certificates)) {
   sh.mkdir(dir.certificates);
 }
 
-console.log(notice('Waiting, generating certificates...'));
+console.log('Waiting, generating certificates...'.notice);
 data.participants.forEach(function(participant) {
   var slugName = slug(participant.name).toLowerCase();
-  var phantomJSScript = path.join(dir.libs, 'phantomScript.js');
+  var screenCapture = path.join(dir.libs, 'screenCapture.js');
   var filePath = path.join(dir.certificates, slugName + '.html');
   var tpl = fs.readFileSync(path.join(dir.templates, 'index.html'), 'utf-8');
   var file = swig.render(tpl, {
@@ -43,7 +44,7 @@ data.participants.forEach(function(participant) {
   });
 
   var args = [
-    phantomJSScript,
+    screenCapture,
     filePath,
     path.join(dir.certificates, slugName + '.png'),
   ];
@@ -53,9 +54,8 @@ data.participants.forEach(function(participant) {
   fs.writeFileSync(filePath, file);
 
   cp.execFile(binPath, args, function(err, stdout, stderr) {
-    console.log(
-      done('Certificate generated successfully to ' + participant.name)
-    );
+    var message = 'Certificate generated successfully to ' + participant.name;
+    console.log(message.done);
     sh.rm('-f', filePath);
   });
 });

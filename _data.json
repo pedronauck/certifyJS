@@ -1,14 +1,13 @@
 {
   "course": {
     "name": "Curso BeMEAN",
-    "startDate": "07/04/2014",
-    "endDate": "11/04/2014",
+    "startDate": "01/01/2001",
+    "endDate": "01/01/2001",
     "totalHours": "20 horas",
     "city": "Florianópolis",
-    "state": "SC"
+    "state": "Santa Catarina"
   },
   "participants": [{
-    "name": "Pedro Nauck",
-    "email": "pedronauck@gmail.com"
+    "name": "Pedro Nauck"
   }]
 }
