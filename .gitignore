@@ -6,5 +6,4 @@ pids
 *.seed
 node_modules
 certificates
-_emailAuth.json
 _data.json
