@@ -7,3 +7,5 @@ pids
 node_modules
 certificates
 _data.json
+/docs
+/data

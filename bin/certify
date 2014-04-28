@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+'use strict';
+
+var program = require('commander');
+var cli = require('../lib/cli');
+var pkg = require('../package.json');
+
+program
+  .version(pkg.version)
+  .usage('[command]')
+  .command('init')
+  .description('Install and bootstrap the application')
+  .action(cli.init);
+
+program
+  .command('server')
+  .description('Start a server to test your template')
+  .action(cli.server);
+
+program
+  .command('generate')
+  .description('Generate the certificates')
+  .option('-t, --test', 'Generate a test version')
+  .option('-p, --production', 'Generate finals file')
+  .action(cli.generate);
+
+program
+  .command('send')
+  .description('Sent certificates via email')
+  .action(cli.send);
+
+program.parse(process.argv);

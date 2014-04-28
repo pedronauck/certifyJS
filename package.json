@@ -1,8 +1,8 @@
 {
   "name": "certifyJS",
-  "version": "0.5",
+  "version": "0.0.5",
   "description": "NodeJS module that generate a course certificate in PDF",
-  "main": "app.js",
+  "main": "./index.js",
   "keywords": [
     "nodejs",
     "pdf",
@@ -12,15 +12,15 @@
   "bin": {
     "certify": "bin/www"
   },
-  "main": "./index.js",
   "dependencies": {
     "swig": "^1.3.2",
     "slug": "^0.4.2",
     "shelljs": "^0.2.6",
-    "gulp": "^3.6.2",
-    "gulp-connect": "^2.0.5",
     "phantomjs": "^1.9.7-4",
-    "colors": "^0.6.2"
+    "colors": "^0.6.2",
+    "inquirer": "^0.4.1",
+    "sync": "^0.2.2",
+    "commander": "^2.2.0"
   },
   "author": "Pedro Nauck <pedronauck@gmail.com>",
   "repository": {

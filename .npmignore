@@ -1,0 +1,7 @@
+.npmignore
+.editorconfig
+.jshintrc
+.jsbeatutifyrc
+.jshintrc
+test
+docs
