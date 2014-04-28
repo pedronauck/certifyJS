@@ -2,6 +2,7 @@
 'use strict';
 
 var program = require('commander');
+var sh = require('shelljs');
 var cli = require('../lib/cli');
 var pkg = require('../package.json');
 
