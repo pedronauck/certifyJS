@@ -1,5 +1,5 @@
 {
-  "name": "certifyJS",
+  "name": "certifyjs",
   "version": "0.0.8",
   "description": "NodeJS module that generate a course certificate in PDF",
   "main": "./index.js",
