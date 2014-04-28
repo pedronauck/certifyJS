@@ -19,7 +19,6 @@ program
 
 program
   .command('generate')
-  .description('Generate the certificates')
   .option('-t, --test', 'Generate a test version')
   .option('-p, --production', 'Generate finals file')
   .action(cli.generate);
