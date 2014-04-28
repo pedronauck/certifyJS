@@ -16,7 +16,8 @@
     "shelljs": "^0.2.6",
     "colors": "^0.6.2",
     "commander": "^2.2.0",
-    "inquirer": "^0.4.1"
+    "inquirer": "^0.4.1",
+    "csv": "^0.3.7"
   },
   "author": "Pedro Nauck <pedronauck@gmail.com>",
   "repository": {
