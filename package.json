@@ -1,6 +1,6 @@
 {
   "name": "certifyJS",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "description": "NodeJS module that generate a course certificate in PDF",
   "main": "./index.js",
   "keywords": [
