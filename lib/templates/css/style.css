@@ -78,10 +78,22 @@ body {
   width: 100%;
 }
 
-.footer img,
-.header img {
-  display: block;
+/* ----------------------------------------------------------------------------
+*  Header and Footer
+* ---------------------------------------------------------------------------*/
+
+.header,
+.footer {
   width: 100%;
+  background: #333;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+}
+
+.header {
+  padding: 50px 0;
+  font-size: 4em;
 }
 
 /* ----------------------------------------------------------------------------
