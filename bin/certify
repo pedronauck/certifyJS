@@ -20,7 +20,7 @@ program
 
 program
   .command('generate')
-  .option('-d, --development', 'Generate a development version')
+  .option('-t, --test', 'Generate a test version')
   .option('-p, --production', 'Generate finals version')
   .action(cli.generate);
 
